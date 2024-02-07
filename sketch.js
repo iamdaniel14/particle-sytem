@@ -7,6 +7,7 @@ let n;
 let size;
 let lineCheckbox;
 let chooseColor;
+let backgroundColor;
 
 
 function setup() {
@@ -17,6 +18,8 @@ function setup() {
   size=select ('#size-particles');
   lineCheckbox=select('#checkbox');
   chooseColor=select('#chooseColor');
+  backgroundColor=select('#backgroundColor');
+
    sp=int(random(3,5));
 
   for (let i=0; i<n; i++){
@@ -28,7 +31,7 @@ bubbles[i]=new Bubbles (x,y,sp);
 }
 
 function draw() {
-  background(220);
+  background(backgroundColor.value());
 
 let newRadius=size.value();
 let view=v.value();
